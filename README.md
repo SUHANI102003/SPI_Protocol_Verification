@@ -1,1 +1,3 @@
 ## SPI PROTOCOL VERIFICATION USING SYSTEM VERILOG
+
+https://edaplayground.com/x/q76n
