@@ -20,8 +20,13 @@ Developed a class-based layered verification environment testbench to verify acc
       + [Serial clock (sclk)](#serial-clock-sclk)
       + [Chip Select signal (cs)](#chip-select-signal-cs)
       + [MOSI](#mosi)
-    - [FLOWCHART](#flowchart)
-      + [Serial clock generation](#serial-clock-generation)
+   - [FLOWCHART](#flowchart)
+      + [Serial Clock Generation](#serial-clock-generation)
+   - [SV FILES](#SV-Files)
+   - [RESULTS](#results)
+      + [Simulation Waveform](#waveform)
+      + [Console Output](#console)
+   - [TOOLS USED](#tools)
    * [EDA Playground Link](#eda-playground-link)
 
 <!-- TOC end -->
@@ -120,12 +125,35 @@ In our design we do not have MISO (Master In Slave Out) signal as only master tr
   => Tsclk = 20*Tclk  <br>
   Therefore, sclk is on for 10xTclk and off for 10xTclk
 
+<!-- TOC --><a name="SV-Files"></a>
+## SV FILES
+```md
+├── spi_top.sv
+│   ├── spi_master.sv
+│   ├── spi_slave.sv
+├── simple_tb.sv
+├── test.sv
+```
 
+- ```simple_tb.sv``` is a simple Verilog testbench to verify the functionality.
+- ```test.sv``` is a System Verilog class-based testbench verification environment to verify the bit by bit serial data transfer.
 
+<!-- TOC --><a name="results"></a>
+## RESULTS
 
+<!-- TOC --><a name="waveform"></a>
+### Simulation Waveform
+![waveform](https://github.com/SUHANI102003/SPI_Protocol_Verification/blob/main/SIM/Screenshot%202025-08-02%20171759.png)
 
+<!-- TOC --><a name="console"></a>
+### Console Output
+![Console](https://github.com/SUHANI102003/SPI_Protocol_Verification/blob/main/SIM/console.png)
 
+<!-- TOC --><a name="tools"></a>
+## TOOLS USED
+- EDA Playground
+- Xilinx Vivado
+  
 <!-- TOC --><a name="eda-playground-link"></a>
 ## EDA Playground Link
-
 [SPI Protocol](https://edaplayground.com/x/q76n)
